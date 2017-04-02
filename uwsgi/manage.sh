@@ -41,6 +41,8 @@ case $action in
             uwsgi --reload $pidfile
         else
             log uwsgi is not running.
+            log 'start uwsgi in background...'
+            uwsgi $config_file
         fi
         ;;
     stop)
