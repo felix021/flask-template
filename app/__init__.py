@@ -41,7 +41,7 @@ def create_app(config_name):
     package = __import__('app.controllers', fromlist=fromlist)
     for module_name in fromlist:
         module = getattr(package, module_name)
-        print >>sys.stderr, 'import module: %s' % module_name
+        sys.stderr.write('import module: %s\n' % module_name)
         app.register_blueprint(module.module, url_prefix='/' + module_name)
 
     # 附加路由和自定义的错误页面

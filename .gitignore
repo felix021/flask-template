@@ -2,6 +2,7 @@
 *.log
 *.bak
 data-dev.sqlite
+__pycache__
 
 ### OSX ###
 .DS_Store
