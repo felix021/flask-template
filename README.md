@@ -26,3 +26,11 @@ Flask 框架模板
     
     $ ./uwsgi/manage.sh
     Usage: %s <start|reload|stop|status|help>
+
+## MySQL
+
+    $ pip install flask-mysqldb
+
+修改 config.py ，将对应配置文件的sqlite配置改为：
+
+    `SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host:port/dbname'`

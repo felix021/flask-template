@@ -19,8 +19,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     host = '0.0.0.0'
     JSON_AS_ASCII = True
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
+    SQLALCHEMY_DATABASE_URI = 'mysql://root:123456@127.0.0.1:3306/test'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 class TestingConfig(Config):
